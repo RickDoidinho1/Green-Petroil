@@ -1,0 +1,107 @@
+.rodape {
+  background-color: var(--gp-fundo-footer, #0a4d2e);
+  color: var(--gp-texto-branco, #ffffff);
+  margin-top: auto;
+}
+
+.conteiner-rodape {
+  max-width: var(--gp-largura-max, 1240px);
+  margin: 0 auto;
+  padding: 1.6rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Badge da Bolsa */
+.cartao-bolsa {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.45rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background 0.2s;
+}
+
+.cartao-bolsa:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.bolsa-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticker {
+  font-size: 0.7rem;
+  color: #86efac;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.cotacao {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Redes Sociais */
+.bloco-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.link-social {
+  color: #bbf7d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  transition: all 0.25s;
+}
+
+.link-social:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Slogan */
+.bloco-slogan {
+  display: flex;
+  align-items: right;
+  overflow-wrap: break-word;
+  gap: 0.4rem;
+}
+
+.slogan {
+  font-size: 0.9rem;
+  align-items: right;
+  overflow-wrap: break-word;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.img-logo{
+  height: 65px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .conteiner-rodape {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 1.5rem 1rem;
+  }
+}

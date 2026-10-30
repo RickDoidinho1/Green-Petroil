@@ -1,0 +1,39 @@
+<article class="cartao">
+  <!-- Imagem de topo (opcional — usado em Projetos Sociais) -->
+  @if (imagemUrl()) {
+    <div class="cartao-imagem-topo">
+      <img [src]="imagemUrl()" [alt]="imagemAlt()" loading="lazy"/>
+    </div>
+  }
+
+  <!-- Ícone circular (usado em Combustíveis, Pilares etc.) -->
+  @if (icone() && !imagemUrl()) {
+    <div class="cartao-icone-circulo">
+      <span class="cartao-icone">{{ icone() }}</span>
+    </div>
+  }
+
+  <!-- Ícone sobre imagem (quando ambos existem) -->
+  @if (icone() && imagemUrl()) {
+    <div class="cartao-icone-sobre-imagem">
+      <div class="icone-badge">
+        <span>{{ icone() }}</span>
+      </div>
+    </div>
+  }
+
+  <div class="cartao-corpo">
+    <h3 class="cartao-titulo">{{ titulo() }}</h3>
+    @if (descricao()) {
+      <p class="cartao-descricao">{{ descricao() }}</p>
+    }
+    @if (linkTexto()) {
+      <a [routerLink]="linkUrl()" class="cartao-link">
+        {{ linkTexto() }}
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    }
+  </div>
+</article>

@@ -1,0 +1,41 @@
+.faixa-sub-rodape {
+  background-color: var(--gp-fundo-sub-footer, #062a19);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 2rem;
+  font-size: 0.78rem;
+  color: #86efac;
+}
+
+.conteiner-sub-rodape {
+  max-width: var(--gp-largura-max, 1240px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.links-legais a {
+  color: #86efac;
+  text-decoration: none;
+  margin-left: 1.2rem;
+  transition: color 0.2s;
+}
+
+.links-legais a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .conteiner-sub-rodape {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links-legais a {
+    margin-left: 0;
+    margin: 0 0.5rem;
+  }
+}

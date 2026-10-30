@@ -1,0 +1,124 @@
+.conteiner-secao {
+  max-width: var(--gp-largura-max, 1240px);
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+
+.contato-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contato-formulario {
+  flex: 1.4;
+}
+
+.contato-formulario h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0d3822;
+  margin-bottom: 1.5rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #374151;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #006B2D;
+  box-shadow: 0 0 0 3px rgba(0, 107, 45, 0.1);
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.botao-enviar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #006B2D;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 1.8rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-self: flex-start;
+}
+
+.botao-enviar:hover {
+  background-color: #0a4d2e;
+  box-shadow: 0 6px 20px rgba(0, 107, 45, 0.25);
+}
+
+/* Informações de contato */
+.contato-info {
+  flex: 0.6;
+  background: #f0f9f4;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #d1fae5;
+}
+
+.contato-info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0d3822;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.3rem;
+}
+
+.info-icone {
+  font-size: 1.3rem;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #0d3822;
+  margin-bottom: 2px;
+}
+
+.info-item p {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .contato-layout {
+    flex-direction: column;
+  }
+}

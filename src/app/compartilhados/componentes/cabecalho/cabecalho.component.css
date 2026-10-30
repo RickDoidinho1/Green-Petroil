@@ -1,0 +1,39 @@
+.cabecalho {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--gp-borda-cinza, #e5e7eb);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.conteiner {
+  max-width: var(--gp-largura-max, 1240px);
+  margin: 0 auto;
+  padding: 0.9rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nome-empresa {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #006B2D;
+  letter-spacing: -0.5px;
+}
+
+.img-logo{
+ height: 50px;
+ width: auto;
+ display: block;
+}
+
+@media (max-width: 768px) {
+  .conteiner {
+    padding: 0.8rem 1rem;
+  }
+
+  .nome-empresa {
+    font-size: 1.2rem;
+  }
+}

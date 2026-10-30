@@ -1,0 +1,26 @@
+<section class="faixa" aria-label="Mensagem institucional">
+  <div class="faixa-conteiner">
+    <!-- Lado visual -->
+    <div class="faixa-visual">
+      @if (imagemUrl()) {
+        <img [src]="imagemUrl()" alt="" class="faixa-imagem" loading="lazy"/>
+      }
+      <div class="faixa-icone-grande">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#006B2D">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Conteúdo de texto -->
+    <div class="faixa-conteudo">
+      @if (etiqueta()) {
+        <span class="faixa-etiqueta">{{ etiqueta() }}</span>
+      }
+      <h2 class="faixa-titulo">{{ titulo() }}</h2>
+      @if (descricao()) {
+        <p class="faixa-descricao">{{ descricao() }}</p>
+      }
+    </div>
+  </div>
+</section>

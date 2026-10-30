@@ -1,0 +1,58 @@
+<!-- Botão Hambúrguer (Mobile) -->
+<button
+  class="botao-hamburguer"
+  (click)="alternarMenu()"
+  [attr.aria-expanded]="menuAberto()"
+  aria-controls="nav-principal"
+  aria-label="Abrir menu de navegação"
+>
+  <span class="linha" [class.aberto]="menuAberto()"></span>
+  <span class="linha" [class.aberto]="menuAberto()"></span>
+  <span class="linha" [class.aberto]="menuAberto()"></span>
+</button>
+
+<!-- Navegação -->
+<nav
+  id="nav-principal"
+  class="navegacao"
+  [class.visivel]="menuAberto()"
+  aria-label="Navegação Principal"
+>
+  <ul class="lista-links">
+    <li>
+      <a routerLink="/" routerLinkActive="ativo" [routerLinkActiveOptions]="{exact: true}" (click)="fecharMenu()">
+        Início
+      </a>
+    </li>
+    <li>
+      <a routerLink="/sobre" routerLinkActive="ativo" (click)="fecharMenu()">
+        Sobre Nós
+      </a>
+    </li>
+    <li>
+      <a routerLink="/sustentabilidade" routerLinkActive="ativo" (click)="fecharMenu()">
+        Sustentabilidade
+      </a>
+    </li>
+    <li>
+      <a routerLink="/projetos-sociais" routerLinkActive="ativo" (click)="fecharMenu()">
+        Projetos Sociais
+      </a>
+    </li>
+    <li>
+      <a routerLink="/investidores" routerLinkActive="ativo" (click)="fecharMenu()">
+        Painel do Investidor
+      </a>
+    </li>
+    <li>
+      <a routerLink="/contato" routerLinkActive="ativo" (click)="fecharMenu()">
+        Contato
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Overlay mobile -->
+@if (menuAberto()) {
+  <div class="overlay" (click)="fecharMenu()"></div>
+}

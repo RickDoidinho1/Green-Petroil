@@ -1,0 +1,69 @@
+<!-- HERO -->
+<app-banner-hero
+  etiqueta="Sobre Nós"
+  titulo="Energia com propósito, futuro com responsabilidade."
+  descricao="Conheça a história, a missão e os valores que guiam a Green Petroil desde sua fundação. Somos uma empresa comprometida com a excelência energética e com o desenvolvimento sustentável."
+  textoBotao="Conheça nossos projetos"
+  linkBotao="/projetos-sociais"
+  imagemUrl="assets/imagens/sede-green-petroil.jpg"
+  imagemAlt="Sede corporativa da Green Petroil"
+/>
+
+<!-- SEÇÃO: NOSSA HISTÓRIA -->
+<section class="secao-historia" aria-labelledby="titulo-historia">
+  <div class="conteiner-secao">
+    <div class="secao-cabecalho">
+      <div class="barra-decorativa"></div>
+      <h2 id="titulo-historia">Nossa História</h2>
+    </div>
+    <div class="historia-conteudo">
+      <p>A <strong>Green Petroil</strong> nasceu com o propósito de unir energia, qualidade e responsabilidade ambiental. Fundada em 2005, iniciamos nossas operações com uma rede focada em tecnologia de combustíveis e distribuição de alta performance.</p>
+      <p>Ao longo dos anos, expandimos nossas operações tornando-nos referência no setor, com postos modernos e inovação contínua. Em 2018, abrimos nosso capital na B3 sob o ticker <strong>GRNP3</strong>, consolidando uma governança transparente e sólida.</p>
+      <p>Acreditamos no desenvolvimento contínuo da matriz energética e na convivência harmônica entre a produção de combustíveis fósseis de alta eficiência e projetos rigorosos de preservação, compensação florestal e investimentos socioambientais que constroem um futuro mais limpo e próspero.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: MISSÃO, VISÃO E VALORES -->
+<section class="secao-mvv" aria-labelledby="titulo-mvv">
+  <div class="conteiner-secao">
+    <div class="mvv-grid">
+      <!-- Missão -->
+      <div class="mvv-cartao missao">
+        <div class="mvv-icone">🎯</div>
+        <h3>Missão</h3>
+        <p>Fornecer energia de alta performance com responsabilidade socioambiental, inovação contínua e foco no bem-estar de nossos clientes, colaboradores e comunidades.</p>
+      </div>
+
+      <!-- Visão -->
+      <div class="mvv-cartao visao">
+        <div class="mvv-icone">🔭</div>
+        <h3>Visão</h3>
+        <p>Ser líder em eficiência e sustentabilidade no setor energético nacional, transformando o uso de recursos em prosperidade e preservação ambiental para as próximas gerações.</p>
+      </div>
+    </div>
+
+    <!-- Valores -->
+    <div class="secao-cabecalho secao-cabecalho-espaco">
+      <div class="barra-decorativa"></div>
+      <h2 id="titulo-mvv">Nossos Valores</h2>
+    </div>
+    <div class="grid-4-colunas">
+      @for (valor of valores; track valor.titulo) {
+        <div class="valor-item">
+          <div class="valor-icone">{{ valor.icone }}</div>
+          <h4>{{ valor.titulo }}</h4>
+          <p>{{ valor.descricao }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA -->
+<app-faixa-institucional
+  etiqueta="COMPROMISSO COM O FUTURO"
+  titulo="Energia que respeita o amanhã."
+  descricao="Trabalhamos todos os dias para oferecer o melhor em combustíveis, com foco na inovação e na preservação do meio ambiente."
+  imagemUrl="assets/imagens/folha-orvalho.jpg"
+/>

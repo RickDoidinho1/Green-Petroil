@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===========================
+   GREEN PETROIL — DESIGN TOKENS
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Cores Primárias */
+  --gp-verde-escuro: #006B2D;
+  --gp-verde-floresta: #0a4d2e;
+  --gp-verde-medio: #16a34a;
+  --gp-verde-claro: #22c55e;
+  --gp-verde-folha: #15803d;
+
+  /* Fundos */
+  --gp-fundo-claro: #f0f9f4;
+  --gp-fundo-branco: #ffffff;
+  --gp-fundo-cinza: #f8fafb;
+  --gp-fundo-footer: #0a4d2e;
+  --gp-fundo-sub-footer: #062a19;
+
+  /* Textos */
+  --gp-texto-titulo: #0d3822;
+  --gp-texto-corpo: #4b5563;
+  --gp-texto-leve: #6b7280;
+  --gp-texto-branco: #ffffff;
+
+  /* Bordas */
+  --gp-borda-cinza: #e5e7eb;
+  --gp-borda-verde: #d1fae5;
+
+  /* Efeitos */
+  --gp-sombra-card: 0 4px 20px rgba(10, 77, 46, 0.08);
+  --gp-sombra-card-hover: 0 8px 30px rgba(10, 77, 46, 0.14);
+  --gp-raio-card: 16px;
+  --gp-raio-botao: 50px;
+  --gp-transicao: 0.3s ease;
+
+  /* Largura máxima do conteúdo */
+  --gp-largura-max: 1240px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--gp-texto-corpo);
+  background-color: var(--gp-fundo-branco);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gp-texto-titulo);
+  line-height: 1.2;
+}

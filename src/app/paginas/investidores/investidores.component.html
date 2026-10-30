@@ -1,0 +1,204 @@
+<!-- HERO -->
+<app-banner-hero
+  etiqueta="Painel do Investidor"
+  titulo="Transparência que gera confiança."
+  descricao="Aqui você acompanha em tempo real o desempenho das nossas ações, informações financeiras e tudo o que você precisa para tomar as melhores decisões."
+  textoBotao="Acesse nossos documentos"
+  linkBotao="/investidores"
+  imagemUrl="assets/imagens/fachada Green Petroil.png"
+  imagemAlt="Sede corporativa Green Petroil com fachada moderna em vidro"
+/>
+
+<!-- SEÇÃO: COTAÇÃO DAS AÇÕES -->
+<section class="secao-cotacao" aria-labelledby="titulo-cotacao">
+  <div class="conteiner-secao">
+    <div class="cotacao-layout">
+
+      <!-- Card Cotação -->
+      <div class="cartao-cotacao">
+        <div class="cotacao-header">
+          <div class="cotacao-icone">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#006B2D" stroke-width="2">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <h2 id="titulo-cotacao">Cotação das Ações</h2>
+        </div>
+
+        <div class="cotacao-ticker">
+          <span class="ticker-nome">GRNP3</span>
+          <span class="ticker-local">B3 — Brasil, Bolsa, Balcão</span>
+        </div>
+
+        <div class="cotacao-preco">
+          <span class="preco-valor">R$ 32,47</span>
+          <span class="preco-variacao positiva">▲ +1,25 (3,99%)</span>
+          <span class="preco-data">28/04/2025 - 17:05</span>
+        </div>
+
+        <!-- Filtros de período -->
+        <div class="periodos-filtro">
+          @for (periodo of periodos; track periodo) {
+            <button
+              class="periodo-btn"
+              [class.ativo]="periodoAtivo === periodo"
+              (click)="selecionarPeriodo(periodo)"
+            >
+              {{ periodo }}
+            </button>
+          }
+        </div>
+
+        <!-- Área do gráfico -->
+        <div class="grafico-placeholder">
+          <svg viewBox="0 0 600 200" class="grafico-svg">
+            <defs>
+              <linearGradient id="gradGrafico" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#22c55e" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,160 Q50,150 100,140 T200,120 T300,90 T400,100 T500,60 T600,40" stroke="#006B2D" stroke-width="2" fill="none"/>
+            <path d="M0,160 Q50,150 100,140 T200,120 T300,90 T400,100 T500,60 T600,40 L600,200 L0,200 Z" fill="url(#gradGrafico)"/>
+          </svg>
+        </div>
+
+        <!-- Info do dia -->
+        <div class="cotacao-resumo-dia">
+          <div class="info-mini">
+            <span class="info-label">Abertura</span>
+            <span class="info-valor">R$ 31,20</span>
+          </div>
+          <div class="info-mini">
+            <span class="info-label">Máxima do dia</span>
+            <span class="info-valor">R$ 32,90</span>
+          </div>
+          <div class="info-mini">
+            <span class="info-label">Mínima do dia</span>
+            <span class="info-valor">R$ 31,05</span>
+          </div>
+          <div class="info-mini">
+            <span class="info-label">Volume</span>
+            <span class="info-valor">2,8 mi</span>
+          </div>
+        </div>
+
+        <a href="https://www.b3.com.br" target="_blank" rel="noopener noreferrer" class="botao-contorno-pequeno">
+          Ver histórico completo
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Card Informações da Ação -->
+      <div class="cartao-info-acao">
+        <h3>Informações da Ação</h3>
+        <div class="lista-info">
+          @for (info of infoAcao; track info.label) {
+            <div class="info-linha">
+              <span class="info-label">{{ info.label }}</span>
+              <span class="info-valor-destaque">{{ info.valor }}</span>
+            </div>
+          }
+        </div>
+        <a href="https://www.b3.com.br" target="_blank" rel="noopener noreferrer" class="botao-contorno-pequeno">
+          Mais informações na B3
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: DOCUMENTOS + INDICADORES + NOTÍCIAS -->
+<section class="secao-info-financeira" aria-label="Informações financeiras e documentos">
+  <div class="conteiner-secao">
+    <div class="grid-3-colunas">
+
+      <!-- Documentos e Relatórios -->
+      <div class="painel">
+        <h3 class="painel-titulo">Documentos e Relatórios</h3>
+        <p class="painel-subtitulo">Acesse nossos documentos financeiros e de governança.</p>
+        <ul class="lista-documentos">
+          @for (doc of documentos; track doc.titulo) {
+            <li class="doc-item">
+              <div class="doc-info">
+                <span class="doc-icone">{{ doc.icone }}</span>
+                <div>
+                  <span class="doc-titulo">{{ doc.titulo }}</span>
+                  <span class="doc-data">{{ doc.data }}</span>
+                </div>
+              </div>
+              <button class="doc-download" aria-label="Baixar documento">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#006B2D" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+              </button>
+            </li>
+          }
+        </ul>
+        <a href="#" class="botao-contorno-pequeno">
+          Ver todos os documentos
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Principais Indicadores -->
+      <div class="painel painel-indicadores">
+        <h3 class="painel-titulo">Principais Indicadores</h3>
+        <p class="painel-subtitulo">Confira os números que mostram a força da nossa empresa.</p>
+        <ul class="lista-indicadores">
+          @for (ind of indicadores; track ind.titulo) {
+            <li class="indicador-item">
+              <div class="indicador-icone">📊</div>
+              <div class="indicador-info">
+                <span class="indicador-titulo">{{ ind.titulo }}</span>
+                <span class="indicador-valor">{{ ind.valor }}</span>
+              </div>
+              <span class="indicador-variacao positiva">{{ ind.variacao }}</span>
+            </li>
+          }
+        </ul>
+        <a href="#" class="botao-contorno-pequeno">
+          Ver relatório completo
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Notícias e Comunicados -->
+      <div class="painel">
+        <h3 class="painel-titulo">Notícias e Comunicados</h3>
+        <p class="painel-subtitulo">Fique por dentro das principais novidades do mercado.</p>
+        <ul class="lista-noticias">
+          @for (noticia of noticias; track noticia.titulo) {
+            <li class="noticia-item">
+              <span class="noticia-data">{{ noticia.data }}</span>
+              <span class="noticia-titulo">{{ noticia.titulo }}</span>
+              <a href="#" class="noticia-seta" aria-label="Ler notícia completa">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#006B2D" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </li>
+          }
+        </ul>
+        <a href="#" class="botao-contorno-pequeno">
+          Ver todas as notícias
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

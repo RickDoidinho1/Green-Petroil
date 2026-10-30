@@ -1,0 +1,43 @@
+<!-- HERO -->
+<app-banner-hero
+  etiqueta="Projetos Sociais"
+  titulo="Mais que energia, investimos em pessoas."
+  descricao="A Green Petroil acredita que o verdadeiro desenvolvimento vai além do meio ambiente. Nossos projetos sociais são desenvolvidos para apoiar comunidades, incentivar a educação, fortalecer o esporte e promover um futuro melhor para todos."
+  textoBotao="Conheça nossos projetos"
+  linkBotao="/projetos-sociais"
+  imagemUrl="assets/imagens/Green Petroil acao comunitaria.png"
+  imagemAlt="Equipe de voluntários da Green Petroil em ação comunitária"
+/>
+
+<!-- SEÇÃO: NOSSOS PROJETOS -->
+<section class="secao-projetos" aria-labelledby="titulo-projetos">
+  <div class="conteiner-secao">
+    <div class="secao-cabecalho">
+      <div class="barra-decorativa"></div>
+      <h2 id="titulo-projetos">Nossos Projetos</h2>
+      <p>Conheça algumas das iniciativas que fazem parte do nosso compromisso com a sociedade.</p>
+    </div>
+
+    <div class="grid-4-colunas">
+      @for (projeto of projetos(); track projeto.id) {
+        <app-cartao-item
+          [icone]="projeto.icone"
+          [titulo]="projeto.titulo"
+          [descricao]="projeto.descricao"
+          [imagemUrl]="projeto.imagemUrl"
+          [corIcone]="projeto.corIcone"
+          linkTexto="Saiba mais"
+          [linkUrl]="projeto.linkUrl"
+        />
+      }
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA INSTITUCIONAL -->
+<app-faixa-institucional
+  etiqueta="JUNTOS FAZEMOS A DIFERENÇA"
+  titulo="Responsabilidade social também é energia."
+  descricao="Na Green Petroil, acreditamos que o progresso só é verdadeiro quando chega a todos. Por isso, continuamos investindo em projetos que transformam realidades e constroem comunidades mais fortes."
+  imagemUrl="assets/imagens/comunidade-verde.jpg"
+/>

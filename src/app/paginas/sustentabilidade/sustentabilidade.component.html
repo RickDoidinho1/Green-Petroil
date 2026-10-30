@@ -1,0 +1,107 @@
+<!-- HERO -->
+<app-banner-hero
+  etiqueta="Sustentabilidade"
+  titulo="Energia hoje, um futuro melhor amanhã."
+  descricao="A Green Petroil acredita que o desenvolvimento energético pode e deve caminhar junto com a preservação do meio ambiente. Por isso, adotamos práticas sustentáveis em toda a nossa operação, reduzindo impactos e criando valor para as próximas gerações."
+  textoBotao="Conheça nossas iniciativas"
+  linkBotao="/sustentabilidade"
+  imagemUrl="assets/imagens/sustentabilidade-hero.jpg"
+  imagemAlt="Paisagem verde com posto Green Petroil sustentável"
+/>
+
+<!-- SEÇÃO: NOSSOS PILARES -->
+<section class="secao-pilares" aria-labelledby="titulo-pilares">
+  <div class="conteiner-secao">
+    <div class="pilares-layout">
+      <!-- Coluna de texto + cards de pilares -->
+      <div class="pilares-esquerda">
+        <div class="secao-cabecalho">
+          <div class="barra-decorativa"></div>
+          <h2 id="titulo-pilares">Nossos Pilares</h2>
+          <p>Nossa estratégia de sustentabilidade é baseada em quatro pilares que guiam nossas decisões e ações diárias.</p>
+        </div>
+
+        <div class="grid-2-colunas">
+          @for (pilar of pilares; track pilar.titulo) {
+            <div class="pilar-item">
+              <div class="pilar-icone">{{ pilar.icone }}</div>
+              <h3>{{ pilar.titulo }}</h3>
+              <p>{{ pilar.descricao }}</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Card de compromisso lateral -->
+      <div class="cartao-compromisso">
+        <h3>Compromisso com o meio ambiente</h3>
+        <p>Trabalhamos para reduzir nossas emissões, otimizar o uso de recursos naturais e promover a transição para uma matriz energética mais limpa e eficiente.</p>
+        <a routerLink="/projetos-sociais" target="_blank" rel="noopener noreferrer" class="botao-contorno">
+          Nosso compromisso ambiental
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: NOSSOS RESULTADOS -->
+<section class="secao-resultados" aria-labelledby="titulo-resultados">
+  <div class="conteiner-secao">
+    <div class="resultados-topo">
+      <div class="secao-cabecalho">
+        <div class="barra-decorativa"></div>
+        <h2 id="titulo-resultados">Nossos Resultados</h2>
+        <p>Sustentabilidade também se mede em números.</p>
+      </div>
+    </div>
+
+    <div class="grid-4-colunas grid-resultados">
+      @for (resultado of resultados; track resultado.valor) {
+        <div class="resultado-item">
+          <div class="resultado-icone">{{ resultado.icone }}</div>
+          <span class="resultado-valor">{{ resultado.valor }}</span>
+          <p class="resultado-descricao">{{ resultado.descricao }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: PRINCIPAIS INICIATIVAS -->
+<section class="secao-iniciativas" aria-labelledby="titulo-iniciativas">
+  <div class="conteiner-secao">
+    <div class="iniciativas-layout">
+      <!-- Imagem + mensagem lateral -->
+      <div class="iniciativas-destaque">
+        <div class="destaque-imagem-conteiner">
+          <img src="assets/imagens/posto-sustentavel.jpg" alt="Posto Green Petroil sustentável" loading="lazy"/>
+        </div>
+        <div class="destaque-texto">
+          <h3>Energia limpa também é combustível.</h3>
+          <p>Estamos investindo em soluções mais limpas, eficientes e renováveis para um futuro sustentável.</p>
+        </div>
+      </div>
+
+      <!-- Cards de iniciativas -->
+      <div class="iniciativas-lista">
+        <div class="secao-cabecalho-menor">
+          <h2 id="titulo-iniciativas">Principais Iniciativas</h2>
+          <p>Conheça alguns dos nossos projetos e ações em sustentabilidade.</p>
+        </div>
+        <div class="grid-2-colunas gap-menor">
+          @for (ini of iniciativas; track ini.titulo) {
+            <app-cartao-item
+              [icone]="ini.icone"
+              [titulo]="ini.titulo"
+              [descricao]="ini.descricao"
+              linkTexto=""
+            />
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

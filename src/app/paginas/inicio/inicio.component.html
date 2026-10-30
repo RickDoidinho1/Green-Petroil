@@ -1,0 +1,79 @@
+<!-- HERO PRINCIPAL -->
+<app-banner-hero
+  titulo="Mais que combustível, um futuro mais limpo."
+  descricao="A Green Petroil é uma empresa comprometida com qualidade, segurança e sustentabilidade, oferecendo combustíveis de alta performance para você e para o planeta."
+  textoBotao="Conheça nossos combustíveis"
+  linkBotao="/sustentabilidade"
+  imagemUrl="assets/imagens/posto-green-petroil.jpg"
+  imagemAlt="Posto de combustíveis Green Petroil moderno e sustentável"
+/>
+
+<!-- SEÇÃO: NOSSOS COMBUSTÍVEIS -->
+<section class="secao-combustiveis" aria-labelledby="titulo-combustiveis">
+  <div class="conteiner-secao">
+    <div class="secao-cabecalho">
+      <div class="barra-decorativa"></div>
+      <h2 id="titulo-combustiveis">Nossos Combustíveis</h2>
+      <p>Energia de qualidade para o seu dia a dia.</p>
+    </div>
+
+    <div class="grid-4-colunas">
+      @for (item of combustiveis; track item.titulo) {
+        <app-cartao-item
+          [icone]="item.icone"
+          [titulo]="item.titulo"
+          [descricao]="item.descricao"
+        />
+      }
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO: FEED DE PROJETOS E NOTÍCIAS (DO BACKEND) -->
+@if (posts().length > 0) {
+  <section class="secao-feed" aria-labelledby="titulo-feed">
+    <div class="conteiner-secao">
+      <div class="secao-cabecalho">
+        <div class="barra-decorativa"></div>
+        <h2 id="titulo-feed">Projetos de Exploração e Notícias Recentes</h2>
+        <p>Acompanhe os três últimos destaques da Green Petroil.</p>
+      </div>
+
+      <div class="grid-3-colunas">
+        @for (post of posts(); track post.id) {
+          <app-cartao-item
+            [icone]="post.icone"
+            [titulo]="post.titulo"
+            [descricao]="post.resumo"
+            [imagemUrl]="post.imagemUrl"
+            linkTexto="Ler post completo"
+            linkUrl="/investidores"
+          />
+        }
+      </div>
+    </div>
+  </section>
+}
+
+<!-- SEÇÃO: DIFERENCIAIS -->
+<section class="secao-diferenciais" aria-labelledby="titulo-diferenciais">
+  <div class="conteiner-secao">
+    <div class="grid-4-colunas grid-diferenciais">
+      @for (item of diferenciais; track item.titulo) {
+        <div class="diferencial-item">
+          <div class="diferencial-icone">{{ item.icone }}</div>
+          <h3 class="diferencial-titulo">{{ item.titulo }}</h3>
+          <p class="diferencial-descricao">{{ item.descricao }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA: SOBRE A GREEN PETROIL -->
+<app-faixa-institucional
+  etiqueta="JUNTOS FAZEMOS A DIFERENÇA"
+  titulo="Energia que respeita o amanhã."
+  descricao="A Green Petroil nasceu com o propósito de unir energia, qualidade e responsabilidade ambiental. Trabalhamos todos os dias para oferecer o melhor em combustíveis, com foco na inovação e na preservação do meio ambiente."
+  imagemUrl="assets/imagens/folha-orvalho.jpg"
+/>
