@@ -21,7 +21,7 @@ export class FeedServico {
             conteudoCompleto: 'A Green Petroil dá mais um passo decisivo em direção à modernização...',
             categoria: 'Expansão',
             icone: '⛽',
-            imagemUrl: 'assets/imagens/posto-green-petroil.jpg',
+            imagemUrl: 'assets/imagens/novos_postos.jpeg',
             dataPublicacao: '20/10/2026'
           },
           {
@@ -31,7 +31,7 @@ export class FeedServico {
             conteudoCompleto: 'Desenvolvida em conjunto com centros de pesquisa internacionais...',
             categoria: 'Tecnologia',
             icone: '🌿',
-            imagemUrl: 'assets/imagens/folha-orvalho.jpg',
+            imagemUrl: 'assets/imagens/combustivel_15.jpeg',
             dataPublicacao: '18/10/2026'
           },
           {
@@ -41,7 +41,7 @@ export class FeedServico {
             conteudoCompleto: 'O compromisso com as metas de ESG segue como pilar central de nossa governança...',
             categoria: 'ESG',
             icone: '📊',
-            imagemUrl: 'assets/imagens/sustentabilidade-hero.jpg',
+            imagemUrl: 'assets/imagens/sustentabilidade_98.jpeg',
             dataPublicacao: '15/10/2026'
           }
         ]);
@@ -68,7 +68,7 @@ export class FeedServico {
             categoria: 'Educação',
             icone: '🎓',
             corIcone: '#006B2D',
-            imagemUrl: 'assets/imagens/projeto-educacao.jpg',
+            imagemUrl: 'assets/imagens/educacao_futuro.jpeg',
             linkUrl: '/projetos-sociais'
           },
           {
@@ -78,7 +78,7 @@ export class FeedServico {
             categoria: 'Ambiental',
             icone: '🌱',
             corIcone: '#16a34a',
-            imagemUrl: 'assets/imagens/projeto-meio-ambiente.jpg',
+            imagemUrl: 'assets/imagens/meio_ambiente.jpeg',
             linkUrl: '/projetos-sociais'
           },
           {
@@ -88,7 +88,7 @@ export class FeedServico {
             categoria: 'Esporte',
             icone: '⚽',
             corIcone: '#ca8a04',
-            imagemUrl: 'assets/imagens/projeto-esporte.jpg',
+            imagemUrl: 'assets/imagens/esporte_lazer.jpeg',
             linkUrl: '/projetos-sociais'
           },
           {
@@ -98,7 +98,7 @@ export class FeedServico {
             categoria: 'Social',
             icone: '💚',
             corIcone: '#7c3aed',
-            imagemUrl: 'assets/imagens/projeto-comunidade.jpg',
+            imagemUrl: 'assets/imagens/apoio_comunidade.jpeg',
             linkUrl: '/projetos-sociais'
           }
         ]);

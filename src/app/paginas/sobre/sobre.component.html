@@ -5,7 +5,7 @@
   descricao="Conheça a história, a missão e os valores que guiam a Green Petroil desde sua fundação. Somos uma empresa comprometida com a excelência energética e com o desenvolvimento sustentável."
   textoBotao="Conheça nossos projetos"
   linkBotao="/projetos-sociais"
-  imagemUrl="assets/imagens/sede-green-petroil.jpg"
+  imagemUrl="assets/imagens/historia_sede.png"
   imagemAlt="Sede corporativa da Green Petroil"
 />
 
@@ -17,53 +17,53 @@
       <h2 id="titulo-historia">Nossa História</h2>
     </div>
     <div class="historia-conteudo">
-      <p>A <strong>Green Petroil</strong> nasceu com o propósito de unir energia, qualidade e responsabilidade ambiental. Fundada em 2005, iniciamos nossas operações com uma rede focada em tecnologia de combustíveis e distribuição de alta performance.</p>
-      <p>Ao longo dos anos, expandimos nossas operações tornando-nos referência no setor, com postos modernos e inovação contínua. Em 2018, abrimos nosso capital na B3 sob o ticker <strong>GRNP3</strong>, consolidando uma governança transparente e sólida.</p>
-      <p>Acreditamos no desenvolvimento contínuo da matriz energética e na convivência harmônica entre a produção de combustíveis fósseis de alta eficiência e projetos rigorosos de preservação, compensação florestal e investimentos socioambientais que constroem um futuro mais limpo e próspero.</p>
+      <p>A história da <strong>Green Petroil</strong> começou com uma visão ambiciosa: construir uma companhia energética capaz de combinar excelência operacional, crescimento econômico e responsabilidade com o futuro. Fundada por um grupo de profissionais e investidores que acreditavam no potencial do setor de petróleo e gás, a empresa iniciou suas atividades com o objetivo de desenvolver soluções energéticas confiáveis e competitivas.</p>
+      <p>Em seus primeiros anos, a companhia concentrou seus esforços na estruturação de suas operações, no desenvolvimento de parcerias estratégicas e na construção de uma base sólida para sua expansão.</p>
+      <p>Com o avanço de seus projetos e o fortalecimento de sua capacidade técnica, a Green Petroil ampliou gradualmente sua presença no mercado, diversificando suas atividades e investindo em novas tecnologias.</p>
+      <p>O crescimento da empresa marcou uma nova etapa de sua trajetória, consolidada com sua entrada no mercado de capitais. A listagem em bolsa representou um importante passo para ampliar sua visibilidade, fortalecer suas práticas de governança e criar novas oportunidades de investimento e expansão.</p>
+      <p>Hoje, a <strong>Green Petroil</strong> segue comprometida com a evolução do setor energético, buscando aprimorar seus processos, desenvolver novas oportunidades de negócio e construir um futuro pautado pela eficiência, pela inovação e pela criação de valor a longo prazo.</p>
     </div>
   </div>
 </section>
 
-<!-- SEÇÃO: MISSÃO, VISÃO E VALORES -->
-<section class="secao-mvv" aria-labelledby="titulo-mvv">
-  <div class="conteiner-secao">
-    <div class="mvv-grid">
-      <!-- Missão -->
-      <div class="mvv-cartao missao">
-        <div class="mvv-icone">🎯</div>
-        <h3>Missão</h3>
-        <p>Fornecer energia de alta performance com responsabilidade socioambiental, inovação contínua e foco no bem-estar de nossos clientes, colaboradores e comunidades.</p>
-      </div>
-
-      <!-- Visão -->
-      <div class="mvv-cartao visao">
-        <div class="mvv-icone">🔭</div>
-        <h3>Visão</h3>
-        <p>Ser líder em eficiência e sustentabilidade no setor energético nacional, transformando o uso de recursos em prosperidade e preservação ambiental para as próximas gerações.</p>
-      </div>
-    </div>
-
-    <!-- Valores -->
-    <div class="secao-cabecalho secao-cabecalho-espaco">
-      <div class="barra-decorativa"></div>
-      <h2 id="titulo-mvv">Nossos Valores</h2>
-    </div>
-    <div class="grid-4-colunas">
-      @for (valor of valores; track valor.titulo) {
-        <div class="valor-item">
-          <div class="valor-icone">{{ valor.icone }}</div>
-          <h4>{{ valor.titulo }}</h4>
-          <p>{{ valor.descricao }}</p>
-        </div>
-      }
+<!-- MISSÃO E VISÃO COM BOOTSTRAP -->
+<div class="row g-4">
+  <!-- Missão -->
+  <div class="col-12 col-lg-6">
+    <div class="mvv-cartao missao h-100">
+      <div class="mvv-icone">🎯</div>
+      <h3>Missão</h3>
+      <p>Fornecer soluções energéticas confiáveis e eficientes, atuando com excelência em toda a cadeia de valor do petróleo e gás. Buscamos gerar valor para nossos acionistas, clientes e parceiros, promovendo o desenvolvimento econômico e conduzindo nossas operações com segurança, integridade e responsabilidade socioambiental.</p>
     </div>
   </div>
-</section>
+
+  <!-- Visão -->
+  <div class="col-12 col-lg-6">
+    <div class="mvv-cartao visao h-100">
+      <div class="mvv-icone">🔭</div>
+      <h3>Visão</h3>
+      <p>Ser reconhecida como uma das principais companhias do setor energético, destacando-se pela excelência operacional, solidez financeira, capacidade de inovação e compromisso com práticas responsáveis. Queremos construir uma organização preparada para os desafios do futuro, capaz de gerar resultados consistentes e contribuir para a evolução da indústria energética.</p>
+    </div>
+  </div>
+</div>
+
+<!-- VALORES COM BOOTSTRAP -->
+<div class="row g-4 text-center">
+  @for (valor of valores; track valor.titulo) {
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="valor-item h-100">
+        <div class="valor-icone">{{ valor.icone }}</div>
+        <h4>{{ valor.titulo }}</h4>
+        <p>{{ valor.descricao }}</p>
+      </div>
+    </div>
+  }
+</div>
 
 <!-- FAIXA -->
 <app-faixa-institucional
   etiqueta="COMPROMISSO COM O FUTURO"
   titulo="Energia que respeita o amanhã."
   descricao="Trabalhamos todos os dias para oferecer o melhor em combustíveis, com foco na inovação e na preservação do meio ambiente."
-  imagemUrl="assets/imagens/folha-orvalho.jpg"
+  imagemUrl="assets/imagens/energia_do_amanha.png"
 />

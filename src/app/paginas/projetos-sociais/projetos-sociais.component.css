@@ -27,25 +27,3 @@
   font-size: 1rem;
   color: #6b7280;
 }
-
-.grid-4-colunas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-@media (max-width: 900px) {
-  .grid-4-colunas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .grid-4-colunas {
-    grid-template-columns: 1fr;
-  }
-
-  .secao-cabecalho h2 {
-    font-size: 1.5rem;
-  }
-}

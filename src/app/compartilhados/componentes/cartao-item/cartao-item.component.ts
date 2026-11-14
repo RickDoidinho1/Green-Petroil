@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './cartao-item.component.css',
 })
 export class CartaoItemComponent {
-  icone = input<string>('');
+  icone = input<string | undefined>('');
   titulo = input.required<string>();
   descricao = input<string>('');
   imagemUrl = input<string>('');
@@ -16,4 +16,5 @@ export class CartaoItemComponent {
   linkTexto = input<string>('');
   linkUrl = input<string>('');
   corIcone = input<string>('#006B2D');
+  iconeImg = input<string | undefined>('');
 }

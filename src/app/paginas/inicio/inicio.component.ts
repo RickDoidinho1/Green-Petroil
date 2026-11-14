@@ -18,21 +18,25 @@ export class InicioComponent implements OnInit {
   combustiveis = [
     {
       icone: '⛽',
+      iconeImg: 'assets/imagens/icone_de_gasolina.png',
       titulo: 'Gasolina Comum',
       descricao: 'Desempenho e economia para o seu veículo.',
     },
     {
-      icone: '🛡️',
+      icone: '🛡️', 
+      iconeImg: 'assets/imagens/icone_gasolina_adtivada.jpeg',
       titulo: 'Gasolina Aditivada',
       descricao: 'Mais limpeza e proteção para o motor.',
     },
     {
       icone: '🅳',
+      iconeImg: 'assets/imagens/icone_Diesel_S10.jpeg',
       titulo: 'Diesel S10',
       descricao: 'Mais eficiência e menor emissão de poluentes.',
     },
     {
       icone: '🌿',
+      iconeImg: 'assets/imagens/icone_do_etanol.jpeg',
       titulo: 'Etanol',
       descricao: 'Uma escolha sustentável para o futuro.',
     },

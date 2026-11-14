@@ -7,11 +7,15 @@
   }
 
   <!-- Ícone circular (usado em Combustíveis, Pilares etc.) -->
-  @if (icone() && !imagemUrl()) {
-    <div class="cartao-icone-circulo">
+  @if ((icone() || iconeImg()) && !imagemUrl()) {
+  <div class="cartao-icone-circulo">
+    @if (iconeImg()) {
+      <img [src]="iconeImg()" alt="Ícone" class="cartao-icone-img" />
+    } @else {
       <span class="cartao-icone">{{ icone() }}</span>
-    </div>
-  }
+    }
+  </div>
+}
 
   <!-- Ícone sobre imagem (quando ambos existem) -->
   @if (icone() && imagemUrl()) {

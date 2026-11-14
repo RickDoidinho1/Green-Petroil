@@ -27,7 +27,7 @@
 }
 
 /* História */
-.historia-conteudo p {
+.historia-conteudo{
   font-size: 1rem;
   color: #4b5563;
   line-height: 1.75;
@@ -42,12 +42,6 @@
 /* Missão / Visão */
 .secao-mvv {
   background-color: #fafcfb;
-}
-
-.mvv-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
 }
 
 .mvv-cartao {
@@ -77,13 +71,6 @@
 }
 
 /* Valores */
-.grid-4-colunas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  text-align: center;
-}
-
 .valor-item {
   padding: 1.5rem 1rem;
 }
@@ -112,18 +99,4 @@
   font-size: 0.85rem;
   color: #6b7280;
   line-height: 1.5;
-}
-
-@media (max-width: 900px) {
-  .mvv-grid,
-  .grid-4-colunas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .mvv-grid,
-  .grid-4-colunas {
-    grid-template-columns: 1fr;
-  }
 }

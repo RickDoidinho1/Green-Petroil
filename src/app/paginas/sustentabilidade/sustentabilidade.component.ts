@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { BannerHeroComponent } from '../../compartilhados/componentes/banner-hero/banner-hero.component';
 import { CartaoItemComponent } from '../../compartilhados/componentes/cartao-item/cartao-item.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sustentabilidade',
-  imports: [BannerHeroComponent, CartaoItemComponent],
+  imports: [BannerHeroComponent, CartaoItemComponent, RouterLink],
   templateUrl: './sustentabilidade.component.html',
   styleUrl: './sustentabilidade.component.css',
 })

@@ -30,42 +30,23 @@
   color: #6b7280;
 }
 
-/* Grid 4 colunas */
-.grid-4-colunas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-/* Grid 3 colunas para o feed */
-.grid-3-colunas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-/* Combustíveis */
+/* Fundos das seções */
 .secao-combustiveis {
   background-color: #ffffff;
 }
 
-/* Feed */
 .secao-feed {
   background-color: #f7fbf9;
   border-top: 1px solid #eef2f0;
   border-bottom: 1px solid #eef2f0;
 }
 
-/* Diferenciais */
 .secao-diferenciais {
   background-color: #fafcfb;
   padding: 1rem 0;
 }
 
-.grid-diferenciais {
-  text-align: center;
-}
-
+/* Cards de diferenciais */
 .diferencial-item {
   padding: 1.5rem 1rem;
 }
@@ -94,24 +75,4 @@
   font-size: 0.85rem;
   color: #6b7280;
   line-height: 1.5;
-}
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .grid-4-colunas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .grid-3-colunas {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 500px) {
-  .grid-4-colunas {
-    grid-template-columns: 1fr;
-  }
-
-  .secao-cabecalho h2 {
-    font-size: 1.5rem;
-  }
 }
