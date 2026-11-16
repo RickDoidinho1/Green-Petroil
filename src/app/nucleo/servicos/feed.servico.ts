@@ -69,7 +69,7 @@ export class FeedServico {
             icone: '🎓',
             corIcone: '#006B2D',
             imagemUrl: 'assets/imagens/educacao_futuro.jpeg',
-            linkUrl: '/projetos-sociais'
+            linkUrl: '/educacao-futuro'
           },
           {
             id: 2,

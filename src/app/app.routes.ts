@@ -27,6 +27,11 @@ export const routes: Routes = [
     title: 'Green Petroil — Relações com Investidores'
   },
   {
+    path: 'educacao-futuro',
+    loadComponent: () => import('./paginas/educacao-futuro/educacao-futuro.component').then(m => m.EducacaoFuturoComponent),
+    title: 'Green Petroil — Educação para o Futuro'
+  },
+  {
     path: 'contato',
     loadComponent: () => import('./paginas/contato/contato.component').then(m => m.ContatoComponent),
     title: 'Green Petroil — Contato'

@@ -1,0 +1,401 @@
+/* ══════════════════════════════════════════
+   EDUCAÇÃO PARA O FUTURO — Estilos locais
+   Padrão visual: Green Petroil
+══════════════════════════════════════════ */
+
+/* ── Utilitários compartilhados ─────────── */
+.conteiner-secao {
+  max-width: var(--gp-largura-max, 1240px);
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+
+.secao-cabecalho {
+  margin-bottom: 2rem;
+}
+
+.secao-cabecalho h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--gp-texto-titulo, #0d3822);
+  margin-bottom: 0.5rem;
+}
+
+.secao-cabecalho p {
+  font-size: 1rem;
+  color: var(--gp-texto-leve, #6b7280);
+  line-height: 1.65;
+  max-width: 580px;
+}
+
+.secao-cabecalho p + p {
+  margin-top: 0.75rem;
+}
+
+.barra-decorativa {
+  width: 40px;
+  height: 3px;
+  background-color: var(--gp-verde-escuro, #006B2D);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.botao-contorno {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gp-verde-escuro, #006B2D);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border: 2px solid var(--gp-verde-escuro, #006B2D);
+  border-radius: var(--gp-raio-botao, 50px);
+  text-decoration: none;
+  transition: all var(--gp-transicao, 0.3s ease);
+}
+
+.botao-contorno:hover {
+  background-color: var(--gp-verde-escuro, #006B2D);
+  color: #ffffff;
+}
+
+/* ── SEÇÃO 1: INTRO ─────────────────────── */
+.secao-intro {
+  background-color: var(--gp-fundo-branco, #ffffff);
+}
+
+/* Card de números */
+.card-numeros {
+  background: linear-gradient(160deg, #f0f9f4 0%, #ecfdf5 100%);
+  border: 1px solid var(--gp-borda-verde, #d1fae5);
+  border-radius: var(--gp-raio-card, 16px);
+  padding: 2rem;
+  box-shadow: var(--gp-sombra-card);
+}
+
+.numero-item {
+  padding: 1rem 0.5rem;
+}
+
+.numero-icone {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.7rem;
+  font-size: 1.3rem;
+  border: 1px solid var(--gp-borda-verde, #d1fae5);
+  box-shadow: var(--gp-sombra-card);
+}
+
+.numero-valor {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gp-verde-escuro, #006B2D);
+  margin-bottom: 0.2rem;
+  line-height: 1.1;
+}
+
+.numero-descricao {
+  font-size: 0.8rem;
+  color: var(--gp-texto-leve, #6b7280);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ── SEÇÃO 2: INICIATIVAS ───────────────── */
+.secao-iniciativas {
+  background-color: var(--gp-fundo-cinza, #f8fafb);
+  border-top: 1px solid var(--gp-borda-verde, #eef2f0);
+  border-bottom: 1px solid var(--gp-borda-verde, #eef2f0);
+}
+
+.secao-iniciativas .secao-cabecalho {
+  margin-bottom: 2.5rem;
+}
+
+.secao-iniciativas .secao-cabecalho h2 {
+  font-size: 1.85rem;
+}
+
+.secao-iniciativas .secao-cabecalho p {
+  font-size: 1rem;
+  margin: 0.4rem auto 0;
+  max-width: 480px;
+}
+
+/* ── SEÇÃO 3: TRANSFORMAÇÃO ─────────────── */
+.secao-transformacao {
+  background-color: var(--gp-fundo-branco, #ffffff);
+}
+
+.transformacao-visual {
+  position: relative;
+  border-radius: var(--gp-raio-card, 16px);
+  overflow: hidden;
+  box-shadow: var(--gp-sombra-card);
+}
+
+.transformacao-visual img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.transformacao-visual:hover img {
+  transform: scale(1.03);
+}
+
+/* Badge flutuante sobre a imagem */
+.transformacao-badge {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  backdrop-filter: blur(4px);
+}
+
+.badge-icone {
+  font-size: 1.5rem;
+}
+
+.transformacao-badge strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gp-verde-escuro, #006B2D);
+  line-height: 1.1;
+}
+
+.transformacao-badge span {
+  font-size: 0.75rem;
+  color: var(--gp-texto-leve, #6b7280);
+}
+
+/* Lista de impactos */
+.lista-impactos {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.impacto-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--gp-fundo-claro, #f0f9f4);
+  border-radius: 10px;
+  border: 1px solid var(--gp-borda-verde, #d1fae5);
+  transition: box-shadow var(--gp-transicao, 0.3s ease),
+              transform var(--gp-transicao, 0.3s ease);
+}
+
+.impacto-item:hover {
+  box-shadow: var(--gp-sombra-card-hover);
+  transform: translateX(4px);
+}
+
+.impacto-icone {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  border: 1px solid var(--gp-borda-verde, #d1fae5);
+}
+
+.impacto-texto {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gp-texto-titulo, #0d3822);
+}
+
+/* ── SEÇÃO 4: COMPROMISSO ───────────────── */
+.secao-compromisso {
+  background-color: var(--gp-fundo-cinza, #f8fafb);
+  border-top: 1px solid #eef2f0;
+}
+
+.card-compromisso-edu {
+  background: linear-gradient(160deg, #0a4d2e, #006B2D);
+  border-radius: var(--gp-raio-card, 16px);
+  padding: 2.2rem;
+  color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 107, 45, 0.25);
+}
+
+.compromisso-icone-grande {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-compromisso-edu h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.card-compromisso-edu p {
+  font-size: 0.9rem;
+  color: #d1fae5;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.compromisso-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  letter-spacing: 0.03em;
+  transition: background var(--gp-transicao, 0.3s ease);
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* ── SEÇÃO 5: CTA FINAL ─────────────────── */
+.secao-cta {
+  background: linear-gradient(170deg, #0a4d2e 0%, #006B2D 100%);
+}
+
+.cta-conteiner {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-icone {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cta-titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.cta-texto {
+  font-size: 1rem;
+  color: #d1fae5;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.cta-acoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-cta-primario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: var(--gp-verde-escuro, #006B2D);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.75rem 1.8rem;
+  border-radius: var(--gp-raio-botao, 50px);
+  text-decoration: none;
+  transition: all var(--gp-transicao, 0.3s ease);
+  border: 2px solid #ffffff;
+}
+
+.btn-cta-primario:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.btn-cta-secundario {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.8rem;
+  border-radius: var(--gp-raio-botao, 50px);
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all var(--gp-transicao, 0.3s ease);
+}
+
+.btn-cta-secundario:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── RESPONSIVIDADE ─────────────────────── */
+@media (max-width: 991px) {
+  .secao-cabecalho h2 {
+    font-size: 1.55rem;
+  }
+
+  .cta-titulo {
+    font-size: 1.65rem;
+  }
+
+  .transformacao-visual img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 575px) {
+  .conteiner-secao {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .secao-cabecalho h2 {
+    font-size: 1.35rem;
+  }
+
+  .numero-valor {
+    font-size: 1.5rem;
+  }
+
+  .cta-titulo {
+    font-size: 1.4rem;
+  }
+
+  .cta-acoes {
+    flex-direction: column;
+    align-items: center;
+  }
+}

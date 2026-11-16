@@ -1,0 +1,183 @@
+<!-- HERO -->
+<app-banner-hero
+  etiqueta="Educação para o Futuro"
+  titulo="Investindo em conhecimento, construindo oportunidades."
+  descricao="Acreditamos que a educação é essencial para transformar vidas, reduzir desigualdades e construir um futuro com mais oportunidades para todos."
+  textoBotao="Conheça nossas iniciativas"
+  linkBotao="/educacao-futuro"
+  imagemUrl="assets/imagens/Green Petroil acao comunitaria.png"
+  imagemAlt="Estudantes beneficiados pelos programas educacionais da Green Petroil"
+/>
+
+<!-- INTRODUÇÃO INSTITUCIONAL -->
+<section class="secao-intro" aria-labelledby="titulo-intro">
+  <div class="conteiner-secao">
+    <div class="row g-5 align-items-center">
+
+      <!-- Texto -->
+      <div class="col-12 col-lg-6">
+        <div class="secao-cabecalho">
+          <div class="barra-decorativa"></div>
+          <h2 id="titulo-intro">Educação que transforma</h2>
+          <p>Na Green Petroil, compreendemos que o desenvolvimento sustentável vai muito além do meio ambiente.
+            Ele começa com pessoas capacitadas, comunidades fortalecidas e o acesso ao conhecimento que
+            abre portas e cria novas trajetórias de vida.</p>
+          <p>Por isso, investimos em programas educacionais que chegam diretamente às escolas, às famílias
+            e aos jovens que mais precisam de apoio — porque acreditamos que educação é o alicerce de um
+            futuro mais justo e igualitário.</p>
+          <a routerLink="/projetos-sociais" class="botao-contorno mt-3 d-inline-flex align-items-center gap-2">
+            Ver todos os projetos sociais
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card de destaque com números -->
+      <div class="col-12 col-lg-6">
+        <div class="card-numeros">
+          <div class="row g-3 text-center">
+            @for (num of numeros; track num.valor) {
+              <div class="col-6">
+                <div class="numero-item">
+                  <div class="numero-icone">{{ num.icone }}</div>
+                  <span class="numero-valor">{{ num.valor }}</span>
+                  <p class="numero-descricao">{{ num.descricao }}</p>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NOSSAS INICIATIVAS EDUCACIONAIS -->
+<section class="secao-iniciativas" aria-labelledby="titulo-iniciativas">
+  <div class="conteiner-secao">
+
+    <div class="secao-cabecalho text-center">
+      <div class="barra-decorativa mx-auto"></div>
+      <h2 id="titulo-iniciativas">Nossas Iniciativas Educacionais</h2>
+      <p>Programas que chegam onde o conhecimento faz mais diferença.</p>
+    </div>
+
+    <div class="row g-4">
+      @for (ini of iniciativas; track ini.titulo) {
+        <div class="col-12 col-sm-6 col-lg-3">
+          <app-cartao-item
+            class="h-100 d-block"
+            [icone]="ini.icone"
+            [titulo]="ini.titulo"
+            [descricao]="ini.descricao"
+            linkTexto=""
+          />
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCAÇÃO QUE TRANSFORMA COMUNIDADES -->
+<section class="secao-transformacao" aria-labelledby="titulo-transformacao">
+  <div class="conteiner-secao">
+    <div class="row g-5 align-items-center">
+
+      <!-- Imagem / visual -->
+      <div class="col-12 col-lg-5">
+        <div class="transformacao-visual">
+          <img
+            src="assets/imagens/juntos_diferenca.jpeg"
+            alt="Educação transformando comunidades"
+            loading="lazy"
+          />
+          <div class="transformacao-badge">
+            <span class="badge-icone">🎓</span>
+            <div>
+              <strong>+12 mil</strong>
+              <span>estudantes beneficiados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista de impactos -->
+      <div class="col-12 col-lg-7">
+        <div class="secao-cabecalho">
+          <div class="barra-decorativa"></div>
+          <h2 id="titulo-transformacao">Educação que transforma comunidades</h2>
+          <p>
+            Nossos projetos educacionais vão além da sala de aula. Eles fortalecem laços comunitários,
+            ampliam horizontes e geram impacto real na vida de famílias inteiras.
+          </p>
+        </div>
+
+        <ul class="lista-impactos">
+          @for (imp of impactos; track imp.texto) {
+            <li class="impacto-item">
+              <div class="impacto-icone">{{ imp.icone }}</div>
+              <span class="impacto-texto">{{ imp.texto }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPROMISSO COM O FUTURO -->
+<section class="secao-compromisso" aria-labelledby="titulo-compromisso">
+  <div class="conteiner-secao">
+    <div class="row g-4 align-items-center">
+
+      <div class="col-12 col-lg-7">
+        <div class="secao-cabecalho">
+          <div class="barra-decorativa"></div>
+          <h2 id="titulo-compromisso">Nosso compromisso com o futuro</h2>
+          <p>
+            O desenvolvimento sustentável também depende de pessoas capacitadas, comunidades fortalecidas e
+            oportunidades de aprendizado. Educação e sustentabilidade caminham juntas na estratégia da Green Petroil.
+          </p>
+          <p>
+            Ao investir em programas educacionais, contribuímos para reduzir desigualdades, ampliar a mobilidade
+            social e preparar as próximas gerações para um mundo em constante transformação.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="card-compromisso-edu">
+          <div class="compromisso-icone-grande">🌱</div>
+          <h3>Educação e Sustentabilidade</h3>
+          <p>
+            Pessoas bem educadas fazem escolhas mais conscientes, constroem negócios responsáveis
+            e lideram transformações que beneficiam toda a sociedade.
+          </p>
+          <div class="compromisso-tags">
+            <span class="tag">Inclusão</span>
+            <span class="tag">Conhecimento</span>
+            <span class="tag">Oportunidades</span>
+            <span class="tag">Futuro</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA -->
+<app-faixa-institucional
+  etiqueta="COMPROMISSO COM O FUTURO"
+  titulo="Investindo em educação, construindo oportunidades."
+  descricao="Acreditamos que a educação é essencial para transformar vidas, reduzir desigualdades e construir um futuro com mais oportunidades para todos."
+  textoBotao="Conheça nossos projetos"
+  linkBotao="/projetos-sociais"
+  imagemUrl="assets/imagens/educacao_futuro.jpeg"
+  imagemAlt="Estudantes beneficiados pelos programas educacionais da Green Petroil"
+/>
